@@ -1,0 +1,82 @@
+Here is exactly what to do for each step, broken down into clear, click-by-click actions.
+
+---
+
+## Step 3: Prepare Your Local Project Folder
+
+### 1. Create Your Project Folder
+
+* Go to your computer's Desktop.
+* **Right-click** on an empty space, select **New**, and click **Folder**.
+* Name this new folder exactly: `bgmi-telegram-bot`
+
+### 2. Create the Code File (`main.py`)
+
+* Open a text editing software on your computer (like **Notepad** on Windows or **TextEdit** on Mac).
+* Copy the full, updated Python code provided in our first response.
+* Paste it into your open text document.
+* **Remove Your Secret Token:** Look near the top of the code for the line:
+`TOKEN = "8914813080:AAHt7fWiePcCZrvH4_IMB92BSglgTmcPhek"`
+* Change it to look exactly like this so your bot stays safe from hackers:
+`TOKEN = os.environ.get("TELEGRAM_TOKEN", "")`
+* Click **File** ➔ **Save As...**
+* Navigate to your `bgmi-telegram-bot` folder.
+* Name the file `main.py` and change the save type to **All Files (*.*)** if you are on Windows, then click **Save**.
+
+### 3. Create the Configuration Files
+
+* Open a brand new, empty document in your text editor.
+* Paste these three lines into it:
+```text
+flask==3.0.2
+python-telegram-bot==20.8
+gunicorn==21.2.0
+
+```
+
+
+
+```
+* Save this file inside your `bgmi-telegram-bot` folder as `requirements.txt`.
+* Open one more new document, type `python-3.11.5`, and save it inside the same folder as `runtime.txt`.
+
+---
+
+## Step 4: Turn Your Local Folder into a Git Repository
+
+### 1. Link the Folder to GitHub Desktop
+* Open the **GitHub Desktop** application you installed.
+* Click on **File** in the top left menu bar, then click **Add Local Repository...**
+* A window pops up. Click the **Choose...** button.
+* Browse to your Desktop, click on your `bgmi-telegram-bot` folder, and click **Select Folder**.
+
+### 2. Create the Repository Structure
+* You will see a blue warning notice saying the directory is not a Git repository yet. Click the blue text link inside that warning that says **create a repository**.
+* A settings window will open up. Fill it out exactly like this:
+  * **Name:** `bgmi-telegram-bot`
+  * **Git Ignore:** Click the dropdown menu, type **Python**, and select it.
+  * Leave everything else exactly as it is.
+* Click the blue **Create Repository** button at the bottom of the window.
+
+---
+
+## Step 5: "Commit" and Push Your Code to the Cloud
+
+### 1. Save Your Progress (Commit)
+* Look at the left-hand column in GitHub Desktop. You will see your files listed with green checkmarks next to them.
+* Move your eyes down to the bottom left corner of the app window where it says **Summary (required)**.
+* Click inside that box and type: `My first bot upload`
+* Click the blue **Commit to main** button directly beneath your text.
+
+### 2. Send It to GitHub's Servers (Publish)
+* Look at the very top center or top right of the GitHub Desktop app. You will see a button labeled **Publish repository**. Click it.
+* A small panel will slide into view. 
+* **Keep your code safe:** Make sure the checkbox labeled **Keep this code private** is **Checked (ON)**. This ensures nobody else on the internet can see your work.
+* Click the final blue **Publish Repository** button at the bottom of that small panel.
+
+---
+
+### How to Check Your Work
+Open your web browser, log into [GitHub.com](https://github.com), and click on your profile picture in the top right corner. Select **Your repositories** from the menu. You will see `bgmi-telegram-bot` sitting securely in the cloud, completely ready to link up to Render!
+
+```
