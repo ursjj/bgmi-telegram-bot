@@ -414,5 +414,7 @@ def webhook_handler():
     return "Forbidden", 403
 
 if __name__ == "__main__":
-    # Local fallback testing engine
-    flask_app.run(port=5000)
+    # Get the port from Render's environment, fallback to 5000 if running locally
+    port = int(os.environ.get("PORT", 5000))
+    # Bind to 0.0.0.0 so the external cloud network can route traffic to it
+    flask_app.run(host="0.0.0.0", port=port)
